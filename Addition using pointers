@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int* Num1 = new int;
+	int* Num2 = new int;
+	int* Num3 = new int;
+	int* Num4 = new int;
+	int* Add = new int;
+
+	//read numbers
+	cout << "Enter first number: ";
+	cin >> (*Num1);
+	cout << "Enter second number: ";
+	cin >> (*Num2);
+	cout << "Enter third number: ";
+	cin >> (*Num3);
+	cout << "Enter fourth number: ";
+	cin >> (*Num4);
+
+	//calculate addition
+	*Add = *Num1 + *Num2 + *Num3 + *Num4;
+
+	//print addition
+	cout << "Addition is: " << *Add << endl;
+
+	return 0;
+}
