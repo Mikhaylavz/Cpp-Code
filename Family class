@@ -1,0 +1,63 @@
+
+#include <iostream>
+using namespace std;
+
+class Father {
+private:
+	void demonstration() {
+		cout << "Hello" <<endl; }
+			string Name = "Steve "; 
+public:
+	void set(string name)
+	{
+		Name = name;
+	}
+
+	string get() 
+	{
+		return Name;
+	}
+	};
+
+class Mother {
+
+public:
+	Mother() {
+		cout << "Hey" << endl;
+	}
+	string Surname = "Smith";
+};
+	
+class Son : public Father, public Mother 
+	{
+	public:
+		void demonstration() {
+			cout << "HI" <<endl;
+		}
+
+	};
+
+class Daughter : public Mother, public Father 
+{
+public:
+	void demonstration() {
+		cout << "Hi" << endl;
+	}
+
+};
+	
+	int main() {
+		Son obj;
+		obj.set("Alex ");
+		cout << "Son's Name: "  << obj.get()  << endl;
+		obj.demonstration();
+
+		Daughter obj1;
+		obj1.set("Sarah ");
+		obj1.demonstration();
+		cout << "Daughter's Name: " << obj1.get()  << endl;
+		
+
+		
+		return 0;
+	}
