@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int* ptr1[15],*ptr2;
+	int arr[15], i;
+	int small = 0;
+	
+	
+	for (int i = 0; i < 15; ++i)
+		{
+		cout << "Enter a number: ";
+		cin >> arr[i];
+		}
+
+	ptr1[15] = &arr[15];
+
+	ptr2 = ptr1[0];
+
+	for (int i = 0; i < 15; ++i)
+	{
+		if (ptr1[i] < ptr2)
+		{
+			*ptr2 = *ptr1[i];
+		}
+	}
+	
+	cout << *ptr2;
+	cout << " The smallest number is: " << ptr2 << endl;
+
+return 0;
+	
+}
