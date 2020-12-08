@@ -1,0 +1,28 @@
+class Int {
+public:
+	Int()
+	{
+		int Int;
+		Int = 0;
+		
+	}
+	Int()
+	{
+		int Int2;
+		Int2 = 2;
+	}
+	Int(int Int)
+	{
+		cout << Int;
+	}
+	Int(int Int, int Int2)
+	{
+		Int + Int2;
+	}
+	
+};
+
+int main()
+{
+	Int;
+}
