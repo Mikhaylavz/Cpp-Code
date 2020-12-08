@@ -1,0 +1,34 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+int fib(int x) {
+	ofstream File_Stream;
+	File_Stream.open("Fib.txt");
+	if ((x == 1) || (x == 0)) {
+		File_Stream << x;
+		return(x);
+	}
+	else {
+		File_Stream << fib(x - 1) + fib(x - 2);
+		return(fib(x - 1) + fib(x - 2));
+
+	}
+
+}
+
+int main() {
+	ofstream File_Stream;
+	File_Stream.open("Fib.txt");
+	int x, i = 0;
+	cout << "Enter the number of terms of series : ";
+	cin >> x;
+	cout << "\nFibonnaci Series : ";
+	while (i < x) {
+		cout << " " << fib(i);
+		File_Stream << " " << fib(i);
+		i++;
+	}
+	File_Stream.close();
+	return 0;
+}
