@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	float a;
+	float b;
+	float c;
+
+	cout << "Whats a?";
+	cin >> a;
+	cout << "Whats b?";
+	cin >> b;
+	cout << "Whats c?";
+	cin >> c;
+
+	float posroot = 0;
+	posroot = ((-b) + (sqrt((b * b) - (4 * a * c)))) / (2 * a);
+	float negroot = 0;
+	negroot = ((-b) - (sqrt((b * b) - (4 * a * c)))) / (2 * a);
+
+	float check;
+	check = (b * b) - (4 * a * c);
+	cout << check << endl;
+
+	if (check == 0)
+	{
+		cout << "There is one root"<< endl; 
+		cout << posroot;
+	}
+	else if (check > 0) {
+		cout << "There are 2 roots" << endl;
+		cout << posroot << endl;
+		cout << negroot;
+	}
+	else if (check < 0) {
+		cout << "There are no roots";
+
+	}
+	else {
+		cout << "error";
+	}
+}
